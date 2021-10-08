@@ -1,0 +1,52 @@
+@import '../../node_modules/office-ui-fabric-core/dist/sass/References';
+@import './variables';
+
+$buttonPadding: 1em;
+
+.navigation {
+  background-color: $ms-color-gray20;
+  font-size: $ms-font-size-16;
+  padding: 0.6rem;
+
+  .nav-item {
+    padding: 0.3em 1em 0;
+    @media only screen and (min-width: 992px) {
+      padding: 0 $buttonPadding;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $ms-color-gray30;
+    }
+    &:active {
+      background-color: $ms-color-gray40;
+    }
+
+    .nav-link {
+      color: $ms-color-gray160;
+    }
+
+    .item-wrap {
+      & > * + * {
+        margin-left: 0.5em;
+      }
+
+      display: flex;
+      align-items: center;
+      height: 100%;
+      @media only screen and (min-width: 992px) {
+        justify-content: center;
+      }
+    }
+    .excelIcon {
+      color: $excelColor;
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .dropdown-menu {
+      margin-top: 0.6rem;
+      margin-left: 0;
+    }
+  }
+}
